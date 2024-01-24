@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap');
+
+:root{
+/* fonts */
+--ppk-primary-font:"open sans",sans series
+
+/* colors */
+--ppk-fontcolor-descount:#bd4949;
+
+/* padding  */
+--ppk-padding-s:10px;
+--ppk-padding-m:20px;
+--ppk-padding-l:30px;
+--ppk-padding-xl:40px;
+/* margin */
+--ppk-margin-s:10px;
+--ppk-margin-m:20px;
+--ppk-margin-l:30px;
+--ppk-margin-xl:40px;
+/* gap */
+--ppk-gap-xs: 10px;
+--ppk-gap-s: 20px;
+--ppk-gap-m: 30px;
+--ppk-gap-l: 40px;
+--ppk-gap-xl: 50px;
+}
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ppk-primary-font);
+}
+ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.flex-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap:20px;
+  flex-wrap: wrap;
+}
+ .home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap:40px;
+ 
+} 
+header{
+  height: 15svh;
+  position: fixed;
+  background-color:rgb(234, 237, 240);
+  width:100svw;
+  padding: var(--ppk-padding-m);
+}
+.menu {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  position: relative;
+   z-index: 2; 
+}
+#checkbox {
+  display: none;
+}
+#checkbox:checked ~nav{
+  width: 200px;
+}
+header >img{
+  width:400px;
+}
+.home img{
+  width:75px;
+  height:50px;
+  border-radius: 50%;
+  object-fit: contain;
+
+}
+.home img:hover{
+  transform: scale(1.2);
+}
+@media(max-width:1000px){
+  .menu{
+    display:block;
+    width:100px;
+  }
+  header>img{
+    min-width: 200px;
+  }
+  header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100svh;
+    width: 0;
+    overflow: hidden;
+    padding-top: 100px;
+    transition: all 0.5s;
+  }
+
+  header nav ul {
+  display:flex;
+  flex-direction: column;
+  background-color:rgb(234, 237, 240);;
+  height: 100svh;
+  gap: 20px;
+  }
+  
+  }
+  /* cambiamos la width de menu hamburgesa */
+  @media(max-width:768px){
+    .menu{
+      width:75px;
+    }
+  }
+  @media(max-width:550px){
+    .menu{
+      width:30px;
+    }
+    
+  }
+  @media(max-width:375px){
+    #checkbox:checked ~nav{
+      width:100%;
+    }
+  }
