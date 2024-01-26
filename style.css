@@ -44,6 +44,13 @@ a{
   gap:20px;
   flex-wrap: wrap;
 }
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:var(--ppk-gap-s)
+}
  .home{
   display: flex;
   justify-content: center;
@@ -58,6 +65,7 @@ header{
   background-color:rgb(234, 237, 240);
   width:100svw;
   padding: var(--ppk-padding-m);
+  z-index: 2;
 }
 .menu {
   display: none;
@@ -85,6 +93,109 @@ header >img{
 .home img:hover{
   transform: scale(1.2);
 }
+
+#hero{
+  padding: var(--ppk-padding-m);
+  padding-top: 250px;
+  background-image: url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370");
+  height: 120svh;
+  background-position:center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  animation-name: change-background;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  
+}
+
+#hero>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  gap:20px;
+  flex-wrap: wrap;
+}
+
+#hero>div>h1{
+  font-size: 100px;
+  font-weight: bold;
+  font-style: italic;
+  justify-content: center;
+}
+#hero>div>p{
+  font-size: 50px;
+}
+#hero>div>button{
+  height:45px;
+  width:250px;
+  border: none;
+  border-bottom: 5px solid blue;
+  cursor: pointer;
+}
+#share img{
+  width:40px;
+}
+#share{
+  position: fixed;
+  top:200px;
+  right:0;
+  padding: var(--ppk-padding-m);
+}
+#latest{
+  padding: var(--ppk-gap-m);
+}
+#latest>h2{
+  font-size: 80px;
+}
+#latest>button{
+  width:200px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: rgb(158, 158, 219);
+}
+#collection img{
+  width: 400px;
+}
+#collection{
+  display: flex;
+  justify-content: space-evenly;
+}
+.red{
+position:relative;
+top:-280px;
+border: none;
+right: 50px;
+cursor: pointer;
+}
+.red img{
+  width: 40px !important;
+  object-fit: contain;
+  border-radius: 100%;
+  
+
+}
+
+/* 
+animations */
+@keyframes change-background{
+  from{
+background-image:url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370") ;
+  }
+  50%{
+background-image:url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370") ;
+filter: opacity(50);
+  }
+  to{
+    background-image: url("https://peprikka.com/cdn/shop/files/1880x720_b_1.jpg?v=1701861221&width=1370");
+  }
+}
+
+
+/* responsive */
 @media(max-width:1000px){
   .menu{
     display:block;
@@ -111,12 +222,19 @@ header >img{
   height: 100svh;
   gap: 20px;
   }
+  #latest>h2{
+    font-size: 50px;
+  }
   
   }
+ 
   /* cambiamos la width de menu hamburgesa */
   @media(max-width:768px){
     .menu{
       width:75px;
+    }
+    header{
+      min-width: 400px;
     }
   }
   @media(max-width:550px){
@@ -126,7 +244,45 @@ header >img{
     
   }
   @media(max-width:375px){
+    .header{
+      padding-top:var(--ppk-padding-l)
+    }
     #checkbox:checked ~nav{
       width:100%;
     }
   }
+@media(max-width:768px){
+  #hero>div{
+   min-width:300px;
+  }
+  #hero>div>h1{
+    font-size: 75px;
+    font-weight: bold;
+    font-style: italic;
+    justify-content: center;
+  }
+  #hero>div>p{
+    font-size: 25px;
+  }
+  #hero>div>button{
+    height:45px;
+    width:150px;
+    border: none;
+    border-bottom: 5px solid blue;
+  }
+}
+@media(max-width:500px){
+  #hero>div>h1{
+    font-size: 50px;
+  }
+  #hero>div>p{
+    font-size: 15px;
+  }
+  #hero>div>button{
+    width:120px;
+  }
+  #latest>h2{
+    font-size: 40px;
+    min-width: 350px;
+  }
+}
