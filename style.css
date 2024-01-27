@@ -154,63 +154,98 @@ header >img{
   width:200px;
   height: 50px;
   font-size: 20px;
-  border-radius: 4px;
+  border-radius: 10px;
   background-color: rgb(158, 158, 219);
 }
-#collection img{
-  width: 300px;
-}
-#collection{
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 350px;
-  min-width: 300px;
+#collections{
+  padding-top: 250px;
+  display:flex;
+  padding: var(--ppk-padding-xl);
   flex-wrap: wrap;
-  gap:var(--ppk-gap-m)
+  gap:var(--ppk-gap-xl);
+  min-width:300px;
+  flex-direction: row;
+  /* position: relative; */
+  width:100%;
+
+  
+}
+.flex-row{
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  
+}
+.product img{
+  width:300px;
 }
 .product{
+  position:relative ; 
+  padding: 20px;
+  display:flex;
+  flex-direction: column;
+  gap: var(--ppk-gap-m);
+  
+}
+#wishlist img{
+  width:30px;
+}
+#wishlist{
   position: absolute;
-}
-.red{
-position:absolute;
-top:10px;
-border: none;
-right: 20px;
-cursor: pointer;
-}
-.red img{
-  width: 40px !important;
-  object-fit: contain;
-  border-radius: 50%;
-}
-#buy{
-  padding-top: var(--ppk-padding-m);
+  top:50px;
+  left:20px;
   visibility: hidden;
-  width:300px;
-  height:50px;
-  cursor:pointer
+  border-radius: 100%;
+  border:none;
 }
 .product:hover{
-  #buy{
+  #wishlist{
     visibility: visible;
+    transform: scale(1.5);
+  }
+  #Buynow{
+    visibility: visible;
+    transform: scale(1.1);
+  }
+  .dress{
+    transform: scale(1.1);
   }
 }
-.dress:hover{
-  transform: scale(1.1);
+#Buynow{
+  width:250px;
+  height: 35px;
+  left:35px;
+  bottom:20px;
+  position:absolute;
+  visibility: hidden;
 }
-.details >h3{
-  font-size: 20px;
+.description{
+padding-top:var(--ppk-padding-s);
+display: flex;
+flex-direction: column;
+gap: var(--ppk-gap-m);
+align-items: center;
+
 }
-.details p{
+.description>h3{
   font-weight: bold;
-  font-size: 18px;
-  
-  
+  font-size: 22px;
+  color: black;
 }
-.details>div>p:first-child{
+.description>p{
+font-style: italic;
+font-weight: bold;
+font-size: 18px;
+color: black;
+}
+.description span{
   text-decoration: line-through;
-  color:brown;
+  color: brown;
 }
+.product1 img{
+  width: 300px;
+}
+
 
 /* 
 animations */
