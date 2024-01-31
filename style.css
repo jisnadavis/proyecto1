@@ -96,17 +96,18 @@ header >img{
 
 #hero{
   padding: var(--ppk-padding-m);
-  padding-top: 250px;
-  background-image: url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370");
-  height: 120svh;
+  padding-top:300px;
+ position: relative;
+  height: 100svh;
   background-position:center;
   background-size:contain;
   background-repeat: no-repeat;
-  animation-name: change-background;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
+  background-image: url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370");
+  width:100svw;
+  animation: change-background 10s infinite step-end;
   
 }
+
 
 #hero>div{
   display: flex;
@@ -128,19 +129,23 @@ header >img{
 #hero>div>p{
   font-size: 50px;
 }
-#hero>div>button{
+.button1{
   height:45px;
   width:250px;
   border: none;
   border-bottom: 5px solid blue;
-  cursor: pointer;
-}
+  cursor: pointer;}
+  
+  
+  
+    
+  
 #share img{
   width:40px;
 }
 #share{
   position: fixed;
-  top:200px;
+  top:250px;
   right:auto;
   padding: var(--ppk-padding-m);
   z-index: 2;
@@ -166,6 +171,7 @@ header >img{
   gap:var(--ppk-gap-m);
   min-width:300px;
   flex-direction: row;
+  margin: 0;
   /* position: relative; */
   width:100%;
 
@@ -187,6 +193,7 @@ header >img{
   display:flex;
   flex-direction: column;
   gap: var(--ppk-gap-m);
+  margin: 0;
   
 }
 #wishlist img{
@@ -269,11 +276,9 @@ height: 450px;
 }
 .wrap >div>h2{
   font-size: 40px;
-  animation-name:font-change;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
   position: absolute;
   bottom: 100px;
+  animation: font-change 10s infinite linear;
 }
 .wrap >div>h3{
   font-size: 25px;
@@ -331,19 +336,17 @@ padding: var(--ppk-gap-s);
 }
 /* 
 animations */
-@keyframes change-background{ 
+@keyframes change-background{  
 
   from{
 background-image:url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370") ;
   }
-  50%{
-background-image:url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370") ;
-filter: opacity(50);
-  }
-  to{
+ 
+  75%{
     background-image: url("https://peprikka.com/cdn/shop/files/1880x720_b_1.jpg?v=1701861221&width=1370");
   }
-}
+  
+} 
 @keyframes font-change{
   from{
     font-size: 40px;
