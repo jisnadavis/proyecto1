@@ -127,7 +127,7 @@ header >img{
   justify-content: center;
 }
 #hero>div>p{
-  font-size: 50px;
+  font-size: 40px;
 }
 .button1{
   height:45px;
@@ -152,6 +152,7 @@ header >img{
 }
 #latest{
   padding: var(--ppk-gap-m);
+  padding-top: 200px;
 }
 #latest>h2{
   font-size: 80px;
