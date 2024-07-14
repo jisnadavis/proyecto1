@@ -193,7 +193,7 @@ header >img{
   padding: 20px;
   display:flex;
   flex-direction: column;
-  gap: var(--ppk-gap-m);
+  /* gap: var(--ppk-gap-m);  */
   margin: 0;
   
 }
@@ -275,10 +275,10 @@ height: 450px;
   position: relative;
   background-size:cover;
 }
-.wrap >div>h2{
-  font-size: 40px;
+.wrap>div >h2{
+  font-size: 20px;
   position: absolute;
-  bottom: 100px;
+  top: 480px;
   animation: font-change 10s infinite linear;
 }
 .wrap >div>h3{
@@ -343,7 +343,7 @@ animations */
 background-image:url("https://peprikka.com/cdn/shop/files/1880x720_1.png?v=1701863016&width=1370") ;
   }
  
-  75%{
+  50%{
     background-image: url("https://peprikka.com/cdn/shop/files/1880x720_b_1.jpg?v=1701861221&width=1370");
   }
   
