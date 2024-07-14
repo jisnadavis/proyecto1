@@ -65,11 +65,21 @@
         <a href=""><img src="./assets/share.png" alt=" share button"></a>
         <a href="#hero"><img src="./assets/arrow.png" alt="toparrow"></a>
       </div>
-     <div class="chatbox">
-      <p>if you have any doubt please don't hesistate to askme</p>
-      <i class="fa-solid fa-message"></i>" 
-
-     </div>
+      <div class="chat-box" id="chatBox">
+        <div class="chat-header" onclick="toggleChat()">Chat with us</div>
+        <div class="chat-content" id="chatContent">
+          <div class="messages" id="messages"></div>
+          <div class="message-input">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Type your message..."
+            />
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
         <section class="flex-container" id="latest">
         <h2>Shop the latest</h2>
         <button>view all</button>
@@ -300,5 +310,6 @@
 </div>
 </div>
 </footer>
+<script src="index.js"></script>
   </body>
 </html>
