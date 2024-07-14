@@ -81,6 +81,7 @@ header{
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s;
+  z-index: 3;
 }
 
 .chat-header {
